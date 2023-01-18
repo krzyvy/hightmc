@@ -383,10 +383,10 @@ a:hover{
 .copyright{
     font-size: 12px;
     text-align: center;
+    border-top: 2px solid #342f49;
 }
 .copyright>p{
     margin: 5px 0 0 0;
-    border-top: 2px solid #342f49;
 }
 /*medias*/
 /* breakpoint 1 */
