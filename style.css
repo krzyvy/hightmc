@@ -427,6 +427,43 @@ a:hover{
     .h-opis{
         display: none;
     }
+    #nav-bottom{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .n-socials{
+        width: min-content;
+        padding: 0;
+    }
+    .n-logo{
+        padding: 0;
+    }
+    .n-links{
+        width: min-content;
+        padding: 0;
+    }
+    .n-socials::after{
+        margin: 0;
+        content: '';
+        height: 0;
+        width: 130%;
+        border: 1px solid #342f49;
+        position: absolute;
+        bottom: 0;
+        right: -15%;
+    }
+    .n-links::before{
+        margin: 0;
+        content: '';
+        height: 0;
+        width: 130%;
+        border: 1px solid #342f49;
+        position: absolute;
+        top: 0;
+        right: -15%;
+    }
 
   }
   /* breakpoint 2 */
@@ -437,7 +474,6 @@ a:hover{
         z-index: 100;
     }
   }
-
   /*SCROLL BARY*/
 body::-webkit-scrollbar{
     width: 12px;
