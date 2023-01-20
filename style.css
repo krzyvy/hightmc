@@ -388,9 +388,25 @@ a:hover{
 .copyright>p{
     margin: 5px 0 0 0;
 }
+
+.scrollup
+{
+	width: 64px;
+	height: 64px;
+	text-decoration: none;
+	background: url("img/up.png") no-repeat 0px 0px;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	display: none;
+}
 /*medias*/
 /* breakpoint 1 */
 @media screen and (max-width: 900px) {
+    .scrollup{
+        right: 5px;
+        bottom: 10px;
+    }
     nav>.nav-conteiner>ul>li{
         margin: 5px 0 5px 0;
     }
