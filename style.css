@@ -36,13 +36,17 @@
         background: linear-gradient(to left, #000, #272727 50%, #eee 130%, #333 40%);
     }
 }
+/*zmienne*/
+:root {
+    --primary-color: #1d1b20;
+    }
 /* standard */
 html{
     font-size: calc(15px + 0.390625vw);
     font-weight: 300;
 }
 body{
-    background-color: #1d1b20;
+    background-color: var(--primary-color);
     color: #949494;
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -425,14 +429,13 @@ a:hover{
         align-items: center;
         margin: 5px 0 5px 0;
         transition: all ease 2s;
-        transform: translate(0%);
         position: absolute;
         background-color: #1d1b20;
         border-radius: 50px;
     }
     .navbar.active{
         transition: all ease 2s;
-        transform: translate(100%);
+        opacity: 0;
     }
     nav{
         border-bottom: none;
@@ -508,7 +511,7 @@ body::-webkit-scrollbar{
     width: 12px;
 }
 body::-webkit-scrollbar-track{
-    background-color: #1d1b20;
+    background-color: var(--primary-color);
 }
 body::-webkit-scrollbar-thumb{
     background-color: #342f49;
