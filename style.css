@@ -257,6 +257,7 @@ a:hover{
 }
 .s-sumbit:hover{
     transform: scale(103%);
+    cursor: pointer;
 }
 /*SEKCJA III*/
 .a-conteiner{
