@@ -1,14 +1,7 @@
 /* animacje*/
-@keyframes lututu{
-    from{
-        transform: rotate(10deg);
-    }
-    to{
-        transform: rotate(-10deg);
-    }
-}
-@keyframes lb_kolor{
+@keyframes button-sklep{
     0%{
+        transform: rotate(10deg);
         background: linear-gradient(to left, #000, #272727 70%, #eee 130%, #333 40%);
     }
     12.5%{
@@ -33,13 +26,16 @@
         background: linear-gradient(to left, #000, #272727 52.5%, #eee 130%, #333 40%);
     }
     100%{
+        transform: rotate(-10deg);
         background: linear-gradient(to left, #000, #272727 50%, #eee 130%, #333 40%);
     }
 }
 /*zmienne*/
 :root {
     --primary-color: #1d1b20;
+    --border-color: #342f49;
     }
+
 /* standard */
 html{
     font-size: calc(15px + 0.390625vw);
@@ -65,8 +61,33 @@ a:hover{
     color: #fff
 }
 /* nawigacja */
+.conteiner-panel{
+    width: 100%;
+    color: #fff;
+    display: grid;
+    place-content: end; 
+    border-bottom: 2px solid var(--border-color);
+}
+.panel-gracz{
+    margin: 5px 10px 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.panel-logowanie{
+    position: fixed;
+    right: 0;
+    background-color: var(--primary-color);
+    opacity: 0;
+    z-index: -1;
+    transition: all ease 2s;
+}
+.panel-logowanie.on{
+    transition: all ease 2s;
+    opacity: 100%;
+    z-index: 100;
+}
 #nav-top{ 
-    border-bottom: 2px solid #342f49;
+    border-bottom: 2px solid var(--border-color);
     font-size: 1rem;
     font-weight: 900;
     height: max-content;
@@ -134,7 +155,7 @@ a:hover{
     padding: 0.7rem 0 0.7rem 0;
     border-radius: 0.7rem;
     animation-duration: 1.5s;
-    animation-name: lututu, lb_kolor;
+    animation-name: button-sklep;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -177,7 +198,7 @@ a:hover{
     margin: 0.5rem 0 0 0;
 }
 /* SECTION II*/
-#shop{
+.shop{
     width: 100%;
 }
 .s-title{
@@ -259,6 +280,11 @@ a:hover{
     transform: scale(103%);
     cursor: pointer;
 }
+/*SEKCJA Z RANKINGAMI*/
+.rankings{
+    width: 100%;
+    height: 100vh;
+}
 /*SEKCJA III*/
 .a-conteiner{
     text-align: center;
@@ -326,7 +352,7 @@ a:hover{
     padding: 10px 0 0 0;
 }
 /*SECTION IV*/
-#fotter{
+.fotter{
     background-color: #1c161f;
 }
 #nav-bottom{
@@ -405,12 +431,19 @@ a:hover{
 	bottom: 50px;
 	display: none;
 }
+
+.show{
+    opacity: 100;
+}
 /*medias*/
 /* breakpoint 1 */
 @media screen and (max-width: 900px) {
     .scrollup{
         right: 500px;
         bottom: 10px;
+    }
+    .conteiner-panel{
+        place-content: center;
     }
     .navbar>li{
         margin: 5px 0 30px 0;
@@ -433,10 +466,12 @@ a:hover{
         position: absolute;
         background-color: #1d1b20;
         border-radius: 50px;
+        opacity: 98%;
     }
     .navbar.active{
         transition: all ease 2s;
         opacity: 0;
+        z-index: -1;
     }
     nav{
         border-bottom: none;
@@ -515,6 +550,6 @@ body::-webkit-scrollbar-track{
     background-color: var(--primary-color);
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #342f49;
+    background-color: var(--border-color);
     border-radius: 5px;
 }

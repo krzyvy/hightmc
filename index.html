@@ -19,10 +19,31 @@
     <a class="scrollup" href="#"></a>
     <section id="header">
         <nav id="nav-top">
+            <div class="conteiner-panel">
+                <div class="panel-gracz">PANEL GRACZA</div>
+            </div>
+            <div class="panel-logowanie">
+                <form>
+                    <div class="panel-login">
+                        <i class="icon-user"></i>
+                        LOGIN:
+                        <input type="text" required />
+                    </div>
+                    <div class="panel-haslo">
+                        <i class="icon-lock"></i>
+                        HASLO:
+                        <input type="password" required />
+                    </div>
+                    <div class="panel-submit">
+                        <input type="submit" value="Zaloguj się!" />
+                    </div>
+                </form>
+            </div>
             <div class="buttonav"><i class="icon-menu"></i></div>
             <ul class="navbar">
                 <li><a href="index.html" class="a-white">STRONA GŁÓWNA</a></li>
                 <li><a href="regulamin.html">REGULAMIN</a></li>
+                <li><a id="link3" href="#">RANKINGI</a></li>
                 <li><a id="link1" href="#">ADMINISTRACJA</a></li>
                 <li><a id="link2" href="#">SKLEP</a></li>
             </ul>
@@ -42,7 +63,7 @@
             </div>
         </div>
     </section>
-    <section id="shop">
+    <section class="shop">
         <div class="s-title">
             <span class="large_font">DOSTĘPNE TRYBY</span>
             <p class="s-under">Wybierz tryb aby przejść do sklepu.</p>
@@ -60,7 +81,13 @@
                 </div> 
             </div>
     </section>
-    <section id="admini">
+    <section class="rankings">
+        <div class="a-title">
+            <span class="large_font">RANKINGI</span>
+            <p class="a-under"></p>
+        </div>
+    </section>
+    <section class="admini">
         <div class="a-title">
             <span class="large_font">Władze serwerowe</span>
             <p class="a-under">Poznaj władców serwera!</p>
@@ -68,7 +95,7 @@
             <div class="a-conteiner">
                 <div class="a-box">
                     <div class="a-rang">Chuj</div>
-                    <img src="https://i.imgur.com/5OQJazb.png" alt="Coś zwiadło tu powinien być img."/>
+                    <img src="https://minotar.net/helm/krzywy/100.png" alt="Coś zwiadło tu powinien być img."/>
                     <div class="a-name">krzywy</div>
                 </div>
                 <div class="a-box">
@@ -84,7 +111,7 @@
             </div>
 
     </section>
-    <section id="fotter">
+    <section class="fotter">
         <nav id="nav-bottom">
             <div class="n-socials">
                 <h4 class="n-title">SOCIAL MEDIA</h4>
@@ -113,6 +140,6 @@
             <p>Wykonianie krzywy S.ZOO</p>
         </div>
     </section>
-    <script src="nav-button.js"></script>
+    <script src="buttons.js"></script>
 </body>
 </html>
