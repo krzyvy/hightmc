@@ -29,6 +29,12 @@
       "css": "lock",
       "code": 59392,
       "src": "fontawesome"
+    },
+    {
+      "uid": "c759418c008e9562944080fee617fc76",
+      "css": "cancel-circled",
+      "code": 59393,
+      "src": "entypo"
     }
   ]
 }

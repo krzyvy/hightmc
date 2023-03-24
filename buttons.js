@@ -5,6 +5,13 @@ button.addEventListener('click', function(){
 })
 const logowanie = document.querySelector('.panel-logowanie');
 const panel = document.querySelector('.panel-gracz');
+const lconteiner = document.querySelector('.conteiner-panel')
+const lbuttonx = document.querySelector('.panel-x')
 panel.addEventListener('click', function(){
-    logowanie.classList.toggle('on');
+    logowanie.classList.add('on');
+    lconteiner.classList.add('off');
+})
+lbuttonx.addEventListener('click', function(){
+    lconteiner.classList.remove('off');
+    logowanie.classList.remove('on');
 })

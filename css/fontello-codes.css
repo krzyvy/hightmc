@@ -1,5 +1,6 @@
 
 .icon-lock:before { content: '\e800'; } /* '' */
+.icon-cancel-circled:before { content: '\e801'; } /* '' */
 .icon-user:before { content: '\e802'; } /* '' */
 .icon-menu:before { content: '\e805'; } /* '' */
 .icon-cc-visa:before { content: '\f1f0'; } /* '' */

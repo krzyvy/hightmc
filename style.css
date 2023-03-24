@@ -68,23 +68,82 @@ a:hover{
     place-content: end; 
     border-bottom: 2px solid var(--border-color);
 }
+.conteiner-panel.off{
+    display: none;
+}
 .panel-gracz{
-    margin: 5px 10px 5px 0;
+    margin: 5px 50px 5px 0;
     font-size: 16px;
     cursor: pointer;
 }
+.panel-x{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.logowanie-header{
+    color: #c5c5c5;
+    padding: 0 0 2.5px 0;
+    margin: 10px 0 0 0;
+    border-bottom: 2px solid var(--border-color)
+}
+.panel-form{
+    transform: translateY(-70px);
+}
 .panel-logowanie{
-    position: fixed;
+    text-align: center;
+    margin: 20px 10px 0 0;
+    width: 35vh;
+    height: 25vh;
+    position: absolute;
     right: 0;
     background-color: var(--primary-color);
     opacity: 0;
     z-index: -1;
     transition: all ease 2s;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
 }
 .panel-logowanie.on{
     transition: all ease 2s;
     opacity: 100%;
     z-index: 100;
+}
+.input-login>input,
+.input-haslo>input{
+    margin: 5px 0 5px 0px;
+    width: 100%;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    border: 3px solid var(--border-color);
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+.input-login>input:focus,
+.input-haslo>input:focus{
+    transform: scale(102.5%);
+}
+
+.input-submit>input{
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    width: 107.5%;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    border: 3px solid var(--border-color);
+    color: #666666;
+    outline: none;
+    transition: all 1s ease-in-out;
+}
+.input-submit>input:hover{
+    color: #474747;
+    transform: scale(102.5%);
 }
 #nav-top{ 
     border-bottom: 2px solid var(--border-color);
