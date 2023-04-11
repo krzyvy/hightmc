@@ -31,10 +31,12 @@
     }
 }
 /*zmienne*/
-:root {
+:root{
     --primary-color: #1d1b20;
     --border-color: #342f49;
-    }
+    --item-bg-color: #19171a;
+    --item-bg2-color: #242424;
+}
 
 /* standard */
 html{
@@ -63,18 +65,22 @@ a:hover{
 /* nawigacja */
 .conteiner-panel{
     width: 100%;
-    color: #fff;
+    color: #7a7a7a;
     display: grid;
     place-content: end; 
     border-bottom: 2px solid var(--border-color);
 }
+.panel-gracz:hover{
+    color: #adabab;
+}
 .conteiner-panel.off{
-    display: none;
+    color: #fff;
 }
 .panel-gracz{
     margin: 5px 50px 5px 0;
     font-size: 16px;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 .panel-x{
     position: absolute;
@@ -126,7 +132,7 @@ a:hover{
 }
 .input-login>input:focus,
 .input-haslo>input:focus{
-    transform: scale(102.5%);
+    transform: scale(1.01);
 }
 
 .input-submit>input{
@@ -143,7 +149,7 @@ a:hover{
 }
 .input-submit>input:hover{
     color: #474747;
-    transform: scale(102.5%);
+    transform: scale(1.01);
 }
 #nav-top{ 
     border-bottom: 2px solid var(--border-color);
@@ -238,7 +244,7 @@ a:hover{
     text-align: center;
     padding: 0.7rem 1.5rem 0.7rem 1.5rem;
     border-radius: 20px;    
-    border: 2px solid #282638;;
+    border: 2px solid var(--border-color);
 }
 .t-online{
     color: #fff;
@@ -248,7 +254,7 @@ a:hover{
     content: '';
     height: 0;
     width: 7.5rem;
-    border: 1px solid #342f49;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 50%;
     left: 20%;
@@ -276,7 +282,7 @@ a:hover{
     content: '';
     height: 0;
     width: 100%;
-    border: 1px solid #342f49;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -285,7 +291,6 @@ a:hover{
     text-align: center;
     width: 90%;
     margin: 0 auto 0 auto;
-    background-color: #242424;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
@@ -298,9 +303,11 @@ a:hover{
     padding: 0.25rem 1rem 1rem 1rem;
     width: 300px;
     height: 230px;
-    background-color: #19171a;
+    background-color: var(--item-bg-color);
     border-radius: 10px;
     transition: transform 0.5s ease-in;
+    border: 2px solid var(--border-color);
+    z-index: 98;
 }
 .s-box:hover{
     transform: scale(103%);
@@ -320,7 +327,7 @@ a:hover{
     content: '';
     height: 0;
     width: 80%;
-    border: 1px solid #342f49;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 0;
     left: 10%;
@@ -334,6 +341,7 @@ a:hover{
     margin: 40px auto 0 auto;
     position: relative;
     transition: transform 0.5s ease;
+    z-index: 99;
 }
 .s-sumbit:hover{
     transform: scale(103%);
@@ -343,6 +351,58 @@ a:hover{
 .rankings{
     width: 100%;
     height: 100vh;
+}
+.r-menu-continer{
+    width: 100%;
+    padding: 0 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.r-menu-continer::after{    
+    margin: 0;
+    content: '';
+    height: 0;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.r-menu-item{
+    transition: all 0.5s ease-in-outc;
+    margin: 0 15px 0 0;
+    font-size: 18px;
+}
+.r-menu-item.active{
+    color: #eee;
+}
+.r-menu-item:hover{
+    cursor: pointer;
+    color: #eee;
+}
+.r-conteiner{
+    width: 90%;
+    margin: 20px auto 0 auto;
+    position: relative;
+    text-align: center;
+}
+.r-item{
+    width: 100%;
+    height: 75vh;
+    background-color: var(--item-bg-color);
+    position: absolute;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.r-item.active{
+    opacity: 100%;
+    z-index: 99;
 }
 /*SEKCJA III*/
 .a-conteiner{
@@ -370,7 +430,7 @@ a:hover{
     content: '';
     height: 0;
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -384,10 +444,10 @@ a:hover{
     padding: 0.25rem 1rem 1rem 1rem;
     width: 300px;
     height: 240px;
-    background-color: #19171a;
+    background-color: var(--item-bg-color);
     border-radius: 10px;
     transition: transform 0.5s ease-in;
-    border: 2px solid #342f49;
+    border: 2px solid var(--border-color);
 }
 
 .a-rang{
@@ -401,7 +461,7 @@ a:hover{
     content: '';
     height: 0;
     width: 80%;
-    border: 1px solid #342f49;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 0;
     left: 10%;
@@ -432,7 +492,7 @@ a:hover{
     content: '';
     height: 70%;
     width: 0;
-    border: 1px solid #342f49;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 15%;
     right: 10%;
@@ -459,7 +519,7 @@ a:hover{
     content: '';
     height: 70%;
     width: 0;
-    border: 1px solid #342f49;
+    border: 1px solid var(--border-color);
     position: absolute;
     bottom: 15%;
     left: 0;
@@ -473,22 +533,22 @@ a:hover{
 .copyright{
     font-size: 12px;
     text-align: center;
-    border-top: 2px solid #342f49;
+    border-top: 2px solid var(--border-color);
 }
 .copyright>p{
     margin: 5px 0 0 0;
 }
 
-.scrollup
-{
+.scrollup{
 	width: 64px;
 	height: 64px;
 	text-decoration: none;
 	background: url("img/up.png") no-repeat 0px 0px;
 	position: fixed;
-	right: 50px;
-	bottom: 50px;
+	right: 25px;
+	bottom: 25px;
 	display: none;
+    z-index: 100;
 }
 
 .show{
@@ -507,7 +567,7 @@ a:hover{
     .navbar>li{
         margin: 5px 0 30px 0;
         font-size: 1.5rem;
-        border-bottom: 1px solid #342f49;
+        border-bottom: 1px solid var(--border-color);
         z-index: 99;
     }
     .buttonav{
@@ -576,7 +636,7 @@ a:hover{
         content: '';
         height: 0;
         width: 130%;
-        border: 1px solid #342f49;
+        border: 1px solid var(--border-color);
         position: absolute;
         bottom: 0;
         right: -15%;
@@ -586,7 +646,7 @@ a:hover{
         content: '';
         height: 0;
         width: 130%;
-        border: 1px solid #342f49;
+        border: 1px solid var(--border-color);
         position: absolute;
         top: 0;
         right: -15%;
